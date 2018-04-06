@@ -1,0 +1,4 @@
+# Set history options
+setopt append_history           # append
+setopt inc_append_history		# add commands as they are typed, don't wait until shell exit
+setopt share_history            # share hist between sessions

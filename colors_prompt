@@ -1,0 +1,29 @@
+# Colors & prompt
+
+# Ls Colors
+export CLICOLOR=1
+
+#d, @, a, a, x, 
+export LSCOLORS=GxBxDxCxFxegedabagacad
+
+
+# Prompt
+autoload -U colors && colors
+
+for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
+    eval PR_$color='%{$terminfo[normal]$fg[${(L)color}]%}'
+    eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
+    (( count = $count + 1 ))
+done
+
+PR_NO="%{$terminfo[sgr0]%}"
+
+op="${PR_NO}["
+cp="${PR_NO}]"
+user_host=${op}${PR_MAGENTA}%n${PR_NO}@${PR_CYAN}%m${cp}
+curpath=${op}${PR_YELLOW}%d${cp}
+last_return="%(?,%{,${op}${PR_RED}%?${cp})"
+rights="${PR_NO}%#"
+
+PROMPT="${user_host}${curpath}${last_return}${rights} "
+

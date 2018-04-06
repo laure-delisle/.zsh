@@ -1,0 +1,15 @@
+# Change the PATH env
+# For my personnal progs
+PATH="$HOME/bin:"$PATH
+PATH="/opt/android-sdk-update-manager/tools:"$PATH
+
+export PATH
+
+# Env variables
+export HISTFILE=~/.history
+export HISTSIZE=1000
+export SAVEHIST=1000
+
+# For colors in man
+export PAGER=most
+

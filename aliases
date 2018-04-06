@@ -1,0 +1,14 @@
+# Aliases
+alias ll='ls -Alh'
+alias l='ll'
+alias la='ls -a'
+alias ls='ls -G --color=auto'
+alias h='history'
+alias aa='sudo /home/laure/vpn-start.sh'
+alias ss='sudo /home/laure/vpn-stop.sh'
+
+alias gpu='ssh 8gpu01.elementai.lan'
+alias Kathy='ssh -p443 lyra@kathy.zengeek.org'
+alias Poppy='ssh -p22 poppy.zengeek.org'
+alias Dtre='ssh -p22 basement.dtre.fr'
+
